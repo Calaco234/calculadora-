@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -54,7 +53,7 @@ int main()
     printf("\t\t\t          sugundo numero 2: ");
     scanf("%lf", &b);
     j = a + b;
-    printf("\n\t\t\t       %.2lf + %.2lf = %.2lf\n", a, b, j);
+    printf("\n\t\t\t%lf + %lf = %lf\n", a, b, j);
 
     break;
             case '2':
@@ -75,17 +74,18 @@ int main()
             case '3':
 
                 printf("\033[H\033[2J");
-                printf("\t  ███╗   ███╗██╗   ██╗██╗  ████████╗██╗██████╗ ██╗     ██╗ ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗\n");
-                printf("\t  ████╗ ████║██║   ██║██║  ╚══██╔══╝██║██╔══██╗██║     ██║██╔════╝██╔════╝██║██╔═══██╗████╗  ██║\n");
-                printf("\t  ██╔████╔██║██║   ██║██║     ██║   ██║██████╔╝██║     ██║██║     ██║     ██║██║   ██║██╔██╗ ██║\n");
-                printf("\t  ██║╚██╔╝██║██║   ██║██║     ██║   ██║██╔═══╝ ██║     ██║██║     ██║     ██║██║   ██║██║╚██╗██║\n");
-                printf("\t  ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║██║     ███████╗██║╚██████╗╚██████╗██║╚██████╔╝██║ ╚████║\n");
-                printf("\t  ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n");
+                printf("\t\t\t  ███╗   ███╗██╗   ██╗██╗  ████████╗██╗\n");
+                printf("\t\t\t  ████╗ ████║██║   ██║██║  ╚══██╔══╝██║\n");
+                printf("\t\t\t  ██╔████╔██║██║   ██║██║     ██║   ██║\n");
+                printf("\t\t\t  ██║╚██╔╝██║██║   ██║██║     ██║   ██║\n");
+                printf("\t\t\t  ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║\n");
+                printf("\t\t\t  ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝\n");
 
-                printf("\t\t\t                   PRIMER NUMERO: ");
+
+                printf("\t\t\t          PRIMER NUMERO: ");
                 scanf("%lf", &a);
 
-                printf("\t\t\t                  SEGUNDO NUMERO: ");
+                printf("\t\t\t        SEGUNDO NUMERO: ");
                 scanf("%lf", &b);
 
                 j = a * b;
@@ -97,12 +97,19 @@ int main()
             case '4':
 
                 printf("\033[H\033[2J");
-                printf("\n\tDIVICION\n");
+                printf("\t\t\t  ██████╗  ██╗ ██╗   ██╗ ██╗  ███████╗ ██╗  ██████╗  ███╗   ██╗\n");
+                printf("\t\t\t  ██╔═══██╗ ██║ ██║   ██║ ██║  ██╔════╝ ██║ ██╔═══██╗ ████╗  ██║\n");
+                printf("\t\t\t  ██║   ██║ ██║ ██║   ██║ ██║  ███████╗ ██║ ██║   ██║ ██╔██╗ ██║\n");
+                printf("\t\t\t  ██║   ██║ ██║ ╚██╗ ██╔╝ ██║  ╚════██║ ██║ ██║   ██║ ██║╚██╗██║\n");
+                printf("\t\t\t  ██████╔╝  ██║  ╚████╔╝  ██║  ███████║ ██║ ╚██████╔╝ ██║ ╚████║\n");
+                printf("\t\t't  ╚═════╝   ╚═╝   ╚═══╝   ╚═╝  ╚══════╝ ╚═╝  ╚═════╝  ╚═╝  ╚═══╝\n");
 
-                printf("\t\tPRIMER NUMERO: ");
+
+
+                printf("\t\t\tPRIMER NUMERO: ");
                 scanf("%lf", &a);
 
-                printf("\t\tSEGUNDO NUMERO: ");
+                printf("\t\t\tSEGUNDO NUMERO: ");
                 scanf("%lf", &b);
 
                 if (b == 0)
@@ -120,12 +127,18 @@ int main()
             case '5':
 
                 printf("\033[H\033[2J");
-                printf("\n\tPOTENCIA\n");
+                printf("\t\t\t  ██████╗  ██████╗ ████████╗███████╗███╗   ██╗ ██████╗██╗ █████╗ \n");
+                printf("\t\t\t  ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝████╗  ██║██╔════╝██║██╔══██╗\n");
+                printf("\t\t\t  ██████╔╝██║   ██║   ██║   █████╗  ██╔██╗ ██║██║     ██║███████║\n");
+                printf("\t\t\t  ██╔═══╝ ██║   ██║   ██║   ██╔══╝  ██║╚██╗██║██║     ██║██╔══██║\n");
+                printf("\t\t\t  ██║     ╚██████╔╝   ██║   ███████╗██║ ╚████║╚██████╗██║██║  ██║\n");
+                printf("\t\t\t  ╚═╝      ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝  ╚═╝\n");
 
-                printf("\t\tPRIMER NUMERO: ");
+
+                printf("\t\t\tPRIMER NUMERO: ");
                 scanf("%lf", &a);
 
-                printf("\t\tnumero elevado 2: ");
+                printf("\t\t\tnumero elevado 2: ");
                 scanf("%lf", &b);
 
                 j = pow(a, b);
@@ -137,11 +150,18 @@ int main()
             case '6':
 
                 printf("\033[H\033[2J");
+                printf("\t\t\t  ██████╗  █████╗ ██╗███████╗\n");
+                printf("\t\t\t  ██╔══██╗██╔══██╗██║╚══███╔╝\n");
+                printf("\t\t\t  ██████╔╝███████║██║  ███╔╝ \n");
+                printf("\t\t\t  ██╔══██╗██╔══██║██║ ███╔╝  \n");
+                printf("\t\t\t  ██║  ██║██║  ██║██║███████╗\n");
+                printf("\t\t\t  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝\n");
 
-                printf("\tIntroduce el numero (radicando 'a'): ");
+
+                printf("\t\t\tIntroduce el numero (radicando 'a'): ");
                 scanf("%lf", &a);
 
-                printf("\tIntroduce el indice de la raiz ('b', ej: 2 para cuadrada): ");
+                printf("\t\t\tIntroduce el indice de la raiz ('b', ej: 2 para cuadrada): ");
                 scanf("%lf", &b);
 
                 if (b == 0)
@@ -186,36 +206,33 @@ int main()
 // Funcion del menu
 void MENU(void)
 {
+    char *negro  = "\033[30m";
     char *morado = "\033[35m";
-    char *azul   = "\033[34m";
-    char *blanco = "\033[37m";
     char *reset  = "\033[0m";
 
+    // Limpia la pantalla
     printf("\033[H\033[2J");
 
+    // Bordes en morado, texto interior en negro
     printf("%s", morado);
-
     printf("               +========================================+\n");
     printf("               |                                        |\n");
-    printf("               |              %sCALCULADORA%s               |\n",azul, morado);
-    printf("               |                %sBASICA%s                  |\n",azul, morado);
+    printf("               |              %sCALCULADORA%s               |\n", negro, morado);
+    printf("               |                %sBASICA%s                  |\n", negro, morado);
     printf("               |                                        |\n");
     printf("               +----------------------------------------+\n");
     printf("               |                                        |\n");
-    printf("               |       %ssuma:================1%s           |\n",blanco, morado);
-    printf("               |       %sresta:===============2%s           |\n",blanco, morado);
-    printf("               |       %smulti:===============3%s           |\n",blanco, morado);
-    printf("               |       %sdivi:================4%s           |\n",blanco, morado);
-    printf("               |       %spotencia:============5%s           |\n",blanco, morado);
-    printf("               |       %sraiz:================6%s           |\n",blanco, morado);
+    printf("               |       %ssuma:================1%s           |\n", negro, morado);
+    printf("               |       %sresta:===============2%s           |\n", negro, morado);
+    printf("               |       %smulti:===============3%s           |\n", negro, morado);
+    printf("               |       %sdivi:================4%s           |\n", negro, morado);
+    printf("               |       %spotencia:============5%s           |\n", negro, morado);
+    printf("               |       %sraiz:================6%s           |\n", negro, morado);
     printf("               |                                        |\n");
-    printf("               |       %smenu principal:========op%s        |\n",azul, morado);
-    printf("               |       %ssalir:===============0%s           |\n",blanco, morado);
+    printf("               |       %smenu principal:========op%s        |\n", negro, morado);
+    printf("               |       %ssalir:===============0%s           |\n", negro, morado);
     printf("               |                                        |\n");
     printf("               +========================================+\n");
 
     printf("%s", reset);
 }
-
-
-
