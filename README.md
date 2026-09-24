@@ -11,7 +11,7 @@ cd calculadora-
 gcc calculadora_trabajo_final.c -o calculadora -lm
 ./calculadora
 
-##windos 
+## windos 
 
 gcc calculadora_trabajo_final.c -o calculadora.exe -lm
 calculadora.exe
