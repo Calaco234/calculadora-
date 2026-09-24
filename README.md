@@ -2,10 +2,13 @@
 
 desdscar para trabajo final
 
-## 🚀 Instalación y Descarga
+## 🚀 Instalación y Descarga de la calculadora 
+## linux
+git clone https://github.com/Calaco234/calculadora-.git
+cd calculadora-
+gcc calculadora_trabajo_final.c -o calculadora -lm
+./calculadora
 
-bash git clone https://github.com cd calculadora_trabajo_final
-
-##Cómo Compilar y Ejecutar
-bash gcc -o calculadora_trabajo_final.c ./calculadora_trabajo_final
-
+##windos 
+gcc calculadora_trabajo_final.c -o calculadora.exe -lm
+calculadora.exe
