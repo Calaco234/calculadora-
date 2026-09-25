@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 // Prototipo de función
 void MENU(void);
 
@@ -9,212 +8,258 @@ int main()
 {
     char op[3];
     double a, b, j;
-
     do
     {
-        printf("\033[H\033[2J"); // Limpiar pantalla
+               printf("\033[H\033[2J"); 
         MENU();
-
-        printf("\n\tSelecciona una opcion: ");
-        scanf("%2s", op);
-
-        // Opción para regresar al menú
+        printf("\033[1;37m");
+        printf("\n\t\033[34mSelecciona una opcion: \033[34m");
+        printf("\033[0m");
+        scanf("%s", op);
         if (op[0] == 'o' && op[1] == 'p' && op[2] == '\0')
         {
-            printf("\n\tRegresando al menu...\n");
+            printf("\033[1;32m");
+            printf("\n\t\033[34mRegresando al menu...'033[34m\n");
+            printf("\033[0m");
             continue;
         }
-
-        // Salir
         if (op[0] == '0' && op[1] == '\0')
         {
-            printf("\n\tSaliendo de la calculadora...\n");
+            printf("\033[1;31m");
+            printf("\n\t\033[34mSaliendo de la calculadora...\033[34m\n");
+            printf("\033[0m");
             break;
         }
-
         switch (op[0])
         {
+
     case '1':
 
     printf("\033[H\033[2J");
 
     printf("\n\n");
-//Ctrl + Shift + U → 2588 → Enter█
-//═ → Ctrl + Shift + U, escribe 2550, Enter.═
-//╝ → Ctrl + Shift + U, escribe 255D, Enter.╝
-    printf("\033[1;36m"); // Color cian para el arte ASCII
-    printf("\t\t\t  ███████╗██╗   ██╗███╗   ███╗ █████╗ \n");
-    printf("\t\t\t  ██╔════╝██║   ██║████╗ ████║██╔══██╗\n");
-    printf("\t\t\t  ███████╗██║   ██║██╔████╔██║███████║\n");
-    printf("\t\t\t  ╚════██║██║   ██║██║╚██╔╝██║██╔══██║\n");
-    printf("\t\t\t  ███████║╚██████╔╝██║ ╚═╝ ██║██║  ██║\n");
-    printf("\t\t\t  ╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝\n");
-    printf("\033[1;33m"); // Color amarillo para los mensajes de entrada
-    printf("\t\t\t          primer numero 1: ");
+    //Ctrl + Shift + U → 2588 → Enter█
+    //═ → Ctrl + Shift + U, escribe 2550, Enter.═
+    //╝ → Ctrl + Shift + U, escribe 255D, Enter.╝
+    // Inicio del cuadro exterior (Color Blanco Brillante/Gris)
+    printf("\033[1;37m");
+    printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+    printf("\033[1;36m"); 
+    printf("\t\t\t║   ███████╗██╗   ██╗███╗   ███╗ █████╗            ║\n");
+    printf("\t\t\t║   ██╔════╝██║   ██║████╗ ████║██╔══██╗           ║\n");
+    printf("\t\t\t║   ███████╗██║   ██║██╔████╔██║███████║           ║\n");
+    printf("\t\t\t║   ╚════██║██║   ██║██║╚██╔╝██║██╔══██║           ║\n");
+    printf("\t\t\t║   ███████║╚██████╔╝██║ ╚═╝ ██║██║  ██║           ║\n");
+    printf("\t\t\t║   ╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝           ║\n");
+    printf("\033[1;37m");
+    printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+    printf("\033[1;33m"); 
+    printf("\t\t\t║   primer numero 1: ");
     scanf("%lf", &a);
-    printf("\t\t\t          sugundo numero 2: ");
+    printf("\t\t\t║   segundo numero 2: ");
     scanf("%lf", &b);
     j = a + b;
-    printf("\033[1;32m"); // Color verde para el resultado
-    printf("\n\t\t\t%lf + %lf = %lf\n", a, b, j);
-    printf("\033[0m"); // Restablecer color predeterminado
+    printf("\033[1;37m");
+    printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+    printf("\033[1;35m"); 
+    printf("\t\t\t║   Resultado: %.2lf + %.2lf = %.2lf", a, b, j);
+    printf("\033[1;37m"); 
+    printf("\n\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+    printf("\033[0m"); 
     break;
            case '2':
-                printf("\033[H\033[2J");
-                printf("\033[1;36m"); // Color cian para el arte ASCII
-                printf("\t\t\t  ██████╗ ███████╗███████╗████████╗ █████╗ \n");
-                printf("\t\t\t  ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗\n");
-                printf("\t\t\t  ██████╔╝█████╗  ███████╗   ██║   ███████║\n");
-                printf("\t\t\t  ██╔══██╗██╔══╝  ╚════██║   ██║   ██╔══██║\n");
-                printf("\t\t\t  ██║  ██║███████╗███████║   ██║   ██║  ██║\n");
-                printf("\t\t\t  ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝\n");
-                printf("\033[1;33m"); // Color amarillo para los mensajes de entrada
-                printf("\t\t\t            PRIMER NUMERO: ");
+                printf("\033[H\033[2J"); 
+                printf("\033[1;37m");
+                printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+                printf("\033[1;36m"); 
+                printf("\t\t\t║   ██████╗ ███████╗███████╗████████╗ █████╗       ║\n");
+                printf("\t\t\t║   ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗      ║\n");
+                printf("\t\t\t║   ██████╔╝█████╗  ███████╗   ██║   ███████║      ║\n");
+                printf("\t\t\t║   ██╔══██╗██╔══╝  ╚════██║   ██║   ██╔══██║      ║\n");
+                printf("\t\t\t║   ██║  ██║███████╗███████║   ██║   ██║  ██║      ║\n");
+                printf("\t\t\t║   ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝      ║\n");
+                printf("\033[1;37m");
+                printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                printf("\033[1;33m"); 
+                printf("\t\t\t║   PRIMER NUMERO: ");
                 scanf("%lf", &a);
-                printf("\t\t\t            SEGUNDO NUMERO: ");
+                printf("\t\t\t║   SEGUNDO NUMERO: ");
                 scanf("%lf", &b);
                 j = a - b;
-                printf("\033[1;32m"); // Color verde para el resultado
-                printf("\n\t%lf - %lf = %lf\n", a, b, j);
-                printf("\033[0m"); // Restablecer color predeterminado
+                printf("\033[1;37m");
+                printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                printf("\033[1;35m"); 
+                printf("\t\t\t║   Resultado: %.2lf - %.2lf = %.2lf", a, b, j);
+                printf("\033[1;37m"); 
+                printf("\n\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+                printf("\033[0m"); 
                 break;
+
             case '3':
 
                 printf("\033[H\033[2J");
-                printf("\033[1;36m"); // Color cian para el arte ASCII
-                printf("\t\t\t  ███╗   ███╗██╗   ██╗██╗  ████████╗██╗\n");
-                printf("\t\t\t  ████╗ ████║██║   ██║██║  ╚══██╔══╝██║\n");
-                printf("\t\t\t  ██╔████╔██║██║   ██║██║     ██║   ██║\n");
-                printf("\t\t\t  ██║╚██╔╝██║██║   ██║██║     ██║   ██║\n");
-                printf("\t\t\t  ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║\n");
-                printf("\t\t\t  ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝\n");
-
-
-                printf("\033[1;33m"); // Color amarillo para los mensajes de entrada
-                printf("\t\t\t          PRIMER NUMERO: ");
+                printf("\033[1;37m");
+                printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+                printf("\033[1;36m"); 
+                printf("\t\t\t║   ███╗   ███╗██╗   ██╗██╗  ████████╗██╗          ║\n");
+                printf("\t\t\t║   ████╗ ████║██║   ██║██║  ╚══██╔══╝██║          ║\n");
+                printf("\t\t\t║   ██╔████╔██║██║   ██║██║     ██║   ██║          ║\n");
+                printf("\t\t\t║   ██║╚██╔╝██║██║   ██║██║     ██║   ██║          ║\n");
+                printf("\t\t\t║   ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║          ║\n");
+                printf("\t\t\t║   ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝          ║\n");
+                printf("\033[1;37m");
+                printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                printf("\033[1;33m"); 
+                printf("\t\t\t║   PRIMER NUMERO: ");
                 scanf("%lf", &a);
-
-                printf("\t\t\t        SEGUNDO NUMERO: ");
+                printf("\t\t\t║   SEGUNDO NUMERO: ");
                 scanf("%lf", &b);
-
                 j = a * b;
-
-                printf("\033[1;32m"); // Color verde para el resultado
-                printf("\n\t%lf x %lf = %lf\n", a, b, j);
-                printf("\033[0m"); // Restablecer color predeterminado
+                printf("\033[1;37m");
+                printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                printf("\033[1;35m"); 
+                printf("\t\t\t║   Resultado: %.2lf x %.2lf = %.2lf", a, b, j);
+                printf("\033[1;37m"); 
+                printf("\n\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+                printf("\033[0m"); 
                 break;
 
 
             case '4':
 
-                printf("\033[H\033[2J");
-                printf("\033[1;36m"); // Color cian para el arte ASCII
-                printf("\t\t\t  ██████╗  ██╗ ██╗   ██╗ ██╗  ███████╗ ██╗  ██████╗  ███╗   ██╗\n");
-                printf("\t\t\t  ██╔═══██╗ ██║ ██║   ██║ ██║  ██╔════╝ ██║ ██╔═══██╗ ████╗  ██║\n");
-                printf("\t\t\t  ██║   ██║ ██║ ██║   ██║ ██║  ███████╗ ██║ ██║   ██║ ██╔██╗ ██║\n");
-                printf("\t\t\t  ██║   ██║ ██║ ╚██╗ ██╔╝ ██║  ╚════██║ ██║ ██║   ██║ ██║╚██╗██║\n");
-                printf("\t\t\t  ██████╔╝  ██║  ╚████╔╝  ██║  ███████║ ██║ ╚██████╔╝ ██║ ╚████║\n");
-                printf("\t\t't  ╚═════╝   ╚═╝   ╚═══╝   ╚═╝  ╚══════╝ ╚═╝  ╚═════╝  ╚═╝  ╚═══╝\n");
-                printf("\033[1;33m"); // Color amarillo para los mensajes de entrada
-                printf("\t\t\tPRIMER NUMERO: ");
-                scanf("%lf", &a);
-                printf("\t\t\tSEGUNDO NUMERO: ");
-                scanf("%lf", &b);
-                if (b == 0)
-                {
-                    printf("\033[1;31m"); // Color rojo para el error
-                    printf("\n\tError: no se puede dividir entre cero.\n");
-                }
-                else
-                {
-                    j = a / b;
-                    printf("\033[1;32m"); // Color verde para el resultado
-                    printf("\n\t%lf / %lf = %lf\n", a, b, j);
-                }
-                printf("\033[0m"); // Restablecer color predeterminado
+               printf("\033[H\033[2J");
+               printf("\033[1;37m");
+               printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+               printf("\033[1;36m"); 
+               printf("\t\t\t║   ██████╗  ██╗ ██╗   ██╗ ██╗  ███████╗ ██╗       ║\n");
+               printf("\t\t\t║   ██╔═══██╗ ██║ ██║   ██║ ██║  ██╔════╝ ██║      ║\n");
+               printf("\t\t\t║   ██║   ██║ ██║ ██║   ██║ ██║  ███████╗ ██║      ║\n");
+               printf("\t\t\t║   ██║   ██║ ██║ ╚██╗ ██╔╝ ██║  ╚════██║ ██║      ║\n");
+               printf("\t\t\t║   ██████╔╝  ██║  ╚████╔╝  ██║  ███████║ ██║      ║\n");
+               printf("\t\t\t║   ╚═════╝   ╚═╝   ╚═══╝   ╚═╝  ╚══════╝ ╚═╝      ║\n");
+               printf("\033[1;37m");
+               printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+               printf("\033[1;33m"); 
+               printf("\t\t\t║   PRIMER NUMERO: ");
+               scanf("%lf", &a);
+               printf("\t\t\t║   SEGUNDO NUMERO: ");
+               scanf("%lf", &b);
+               printf("\033[1;37m");
+               printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+
+               if (b == 0)
+{
+                   printf("\033[1;31m"); 
+                   printf("\t\t\t║   Error: No se puede dividir entre cero.         ");
+}
+             else
+{
+                  j = a / b;
+                  printf("\033[1;35m"); 
+                  printf("\t\t\t║   Resultado: %.2lf / %.2lf = %.2lf", a, b, j);
+}
+                  printf("\033[1;37m"); 
+                  printf("\n\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+                  printf("\033[0m"); 
+                  break;
+
                 break;
 
 
             case '5':
+                  printf("\033[H\033[2J");
+                  printf("\033[1;37m");
+                  printf("\t\t╔══════════════════════════════════════════════════════════╗\n");
+                  printf("\033[1;35m"); 
+                  printf("\t\t║  ██████╗  ██████╗ ████████╗███████╗███╗   ██╗            ║\n");
+                  printf("\t\t║  ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝████╗  ██║            ║\n");
+                  printf("\t\t║  ██████╔╝██║   ██║   ██║   █████╗  ██╔██╗ ██║            ║\n");
+                  printf("\t\t║  ██╔═══╝ ██║   ██║   ██║   ██╔══╝  ██║╚██╗██║            ║\n");
+                  printf("\t\t║  ██║     ╚██████╔╝   ██║   ███████╗██║ ╚████║            ║\n");
+                  printf("\t\t║  ╚═╝      ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═══╝            ║\n");
+                  printf("\033[1;37m");
+                  printf("\t\t╠══════════════════════════════════════════════════════════╣\n");
+                  printf("\033[1;33m"); 
+                  printf("\t\t║   PRIMER NUMERO: ");
+                  scanf("%lf", &a);
+                  printf("\t\t║   NUMERO ELEVADO: ");
+                  scanf("%lf", &b);
+                  j = pow(a, b);
+                  printf("\033[1;37m");
+                  printf("\t\t╠══════════════════════════════════════════════════════════╣\n");
+                  printf("\033[1;36m"); 
+                  printf("\t\t║   Resultado: %.2lf ^ %.2lf = %.2lf", a, b, j);
+                  printf("\033[1;37m"); 
+                  printf("\n\t\t╚══════════════════════════════════════════════════════════╝\n\n");
+                  printf("\033[0m"); 
+                  break;
 
-printf("\033[H\033[2J");
-                printf("\033[1;35m"); // Color magenta para el arte ASCII (POTENCIA)
-                printf("\t\t\t  ██████╗  ██████╗ ████████╗███████╗███╗   ██╗ ██████╗██╗ █████╗ \n");
-                printf("\t\t\t  ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝████╗  ██║██╔════╝██║██╔══██╗\n");
-                printf("\t\t\t  ██████╔╝██║   ██║   ██║   █████╗  ██╔██╗ ██║██║     ██║███████║\n");
-                printf("\t\t\t  ██╔═══╝ ██║   ██║   ██║   ██╔══╝  ██║╚██╗██║██║     ██║██╔══██║\n");
-                printf("\t\t\t  ██║     ╚██████╔╝   ██║   ███████╗██║ ╚████║╚██████╗██║██║  ██║\n");
-                printf("\t\t\t  ╚═╝      ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝  ╚═╝\n");
-
-
-                printf("\033[1;33m"); // Color amarillo para las lecturas de entrada
-                printf("\t\t\tPRIMER NUMERO: ");
-                scanf("%lf", &a);
-
-                printf("\t\t\tnumero elevado 2: ");
-                scanf("%lf", &b);
-
-                j = pow(a, b);
-
-                printf("\033[1;36m"); // Color cian brillante para el resultado
-                printf("\n\t%lf ^ %lf = %lf\n", a, b, j);
-                printf("\033[0m"); // Restablecer color predeterminado
-                break;
 
 
             case '6':
-
-printf("\033[H\033[2J");
-                printf("\033[1;34m"); // Color azul brillante para el arte ASCII (RAÍZ)
-                printf("\t\t\t  ██████╗  █████╗ ██╗███████╗\n");
-                printf("\t\t\t  ██╔══██╗██╔══██╗██║╚══███╔╝\n");
-                printf("\t\t\t  ██████╔╝███████║██║  ███╔╝ \n");
-                printf("\t\t\t  ██╔══██╗██╔══██║██║ ███╔╝  \n");
-                printf("\t\t\t  ██║  ██║██║  ██║██║███████╗\n");
-                printf("\t\t\t  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝\n");
-                printf("\033[1;33m"); // Color amarillo para las entradas de texto
-                printf("\t\t\tIntroduce el numero (radicando 'a'): ");
-                scanf("%lf", &a);
-                printf("\t\t\tIntroduce el indice de la raiz ('b', ej: 2 para cuadrada): ");
-                scanf("%lf", &b);
-                if (b == 0)
-                {
-                    printf("\033[1;31m"); // Color rojo para error
-                    printf("\n\tError: El indice 'b' no puede ser cero.\n");
-                }
-                else if (a < 0 && (int)b % 2 == 0)
-                {
-                    printf("\033[1;31m"); // Color rojo para error
-                    printf("\n\tError: No existen raices reales pares de numeros negativos.\n");
-                }
+                   printf("\033[H\033[2J");
+                   printf("\033[1;37m");
+                   printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+                   printf("\033[1;34m"); 
+                   printf("\t\t\t║   ██████╗  █████╗ ██╗███████╗                    ║\n");
+                   printf("\t\t\t║   ██╔══██╗██╔══██╗██║╚══███╔╝                    ║\n");
+                   printf("\t\t\t║   ██████╔╝███████║██║  ███╔╝                     ║\n");
+                   printf("\t\t\t║   ██╔══██╗██╔══██║██║ ███╔╝                      ║\n");
+                   printf("\t\t\t║   ██║  ██║██║  ██║██║███████╗                    ║\n");
+                   printf("\t\t\t║   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝                    ║\n");
+                   printf("\033[1;37m");
+                   printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                   printf("\033[1;33m"); 
+                   printf("\t\t\t║   Introduce el numero (radicando 'a'): ");
+                   scanf("%lf", &a);
+                   printf("\t\t\t║   Introduce el indice de la raiz ('b'): ");
+                   scanf("%lf", &b); 
+                   printf("\033[1;37m");
+                   printf("\t\t\t╠══════════════════════════════════════════════════╣\n");
+                   if (b == 0)
+{
+                     printf("\033[1;31m"); 
+                     printf("\t\t\t║   Error: El indice 'b' no puede ser cero.        ");
+}
+                        else if (a < 0 && (int)b % 2 == 0)
+{
+                 printf("\033[1;31m"); 
+                 printf("\t\t\t║   Error: Raiz par de un numero negativo.         ");
+}
                 else
-                {
-                    j = pow(a, 1.0 / b);
+{
+                     j = pow(a, 1.0 / b);
+                   printf("\033[1;35m"); 
+                   printf("\t\t\t║   Resultado: La raiz %.2lf de %.2lf es: %.4lf", b, a, j);
+}
+              printf("\033[1;37m"); 
+              printf("\n\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+              printf("\033[0m"); 
+                   break;
+default:
+            printf("\033[H\033[2J");
+            printf("\033[1;37m");
+            printf("\t\t\t╔══════════════════════════════════════════════════╗\n");
+            printf("\033[1;31m"); 
+            printf("\t\t\t║  ERROR: OPCION NO VALIDA EN EL MENU              ║\n");
+            printf("\033[1;37m");
+            printf("\t\t\t╚══════════════════════════════════════════════════╝\n\n");
+            printf("\033[0m");
+            break;
+    }
 
-                    printf("\033[1;32m"); // Color verde brillante para el resultado
-                    printf("\n\tLa raiz %.2lf de %.2lf es: %.4lf\n",
-                           b, a, j);
-                }
+    printf("\033[1;37m");
+    printf("\n\t\033[34mEscribe 'op' para regresar al menu.\033[34m");
+    printf("\n\tEscribe '0' para salir.");
+    
+    printf("\033[1;31m");
+    printf("\n\tPresiona ENTER para continuar...");
+    printf("\033[0m");
 
-                printf("\033[0m"); // Restablecer color predeterminado
-                break;
+    getchar();
+    getchar();
 
-
-            default:
-
-                printf("\033[H\033[2J");
-                printf("\n\tNO EXISTE NIGUNA OPCCION EN EL MENU CON ESE NUMERO\n");
-                break;
-        }
-
-        printf("\n\tEscribe 'op' para regresar al menu.");
-        printf("\n\tEscribe '0' para salir.");
-        printf("\n\tPresiona ENTER para continuar...");
-
-        getchar();
-        getchar();
-
-    } while (1);
+} while (1);
 
     return EXIT_SUCCESS;
 }
@@ -223,9 +268,9 @@ printf("\033[H\033[2J");
 // Funcion del menu
 void MENU(void)
 {
-    char *cian   = "\033[1;36m"; // Cian brillante para los bordes
-    char *texto  = "\033[1;37m"; // Blanco brillante para el texto
-    char *opcion = "\033[1;33m"; // Amarillo brillante para las opciones/números
+    char *cian   = "\033[1;36m"; 
+    char *texto  = "\033[32m";
+    char *opcion = "\033[1;33m"; 
     char *reset  = "\033[0m";
 
     // Limpia la pantalla
@@ -255,3 +300,4 @@ void MENU(void)
     printf("%s", reset);
     
 }
+
